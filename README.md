@@ -72,7 +72,7 @@ which is not the case for integer division. This means that the performance of f
 when used in a tight loop, but that is not the case when used in a larger program. Conversions from/to floating point are slow, it's only by 
 overlapping them with other operations and doing them in parallel that makes the floating point method seems fast.  
 It is also important to note that the performance of integer division is very dependent on the CPU. Intel CPUs for example sped up integer 
-division considerably in Coffee Lake, it is considerable slower on older CPUs. AMD Zen CPUs are faster in general.
+division considerably in Coffee Lake, it is considerably slower on older CPUs. AMD Zen integer division is fast.
 
 Another important consideration is that the speed of integer division is dependent on the divisor, larger divisors are usually slower. 
 Dividing by a value known at compile time can be much faster because the compiler may replace the division by multiplications, shifts and 
