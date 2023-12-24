@@ -3,8 +3,7 @@ Rounding Integer Division
 
 ## TL;DR
 In C/C++ integer division truncates towards zero. This is not always the desired behavior.
-These two functions are the best ways I have found to round integer division in C++, they work for all integer types and do not overflow.
-The __limitation__ is that the divisor must be stricltly positive (and not zero). `rounddiv` rounds the middle point towards zero (down for positive n) while `rounddiv_away` rounds away from zero (up for positive n).
+These two functions are the best ways I have found to do round integer division, these work for all integer types and do not overflow, as long as the divisor is above zero. `rounddiv` rounds the middle point towards zero (down for positive n) while `rounddiv_away` rounds away from zero (up for positive n).
 To use in C, replace `T` with any integer type and `template` with `inline`.
 
 ```C++
