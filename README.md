@@ -70,7 +70,8 @@ of calling these functions repeatedly in a loop is not representative of the per
 or even when the inner loop contains more complex code. For x86 (and x64) CPUs, floating point division can be done in the vector unit, in parallel,
 which is not the case for integer division. This means that the performance of floating point division is much better than integer division
 when used in a tight loop, but that is not the case when used in a larger program. Conversions from/to floating point are slow, it's only by 
-overlapping them with other operations and doing them in parallel that makes the floating point method seems fast.  
+overlapping them with other operations and doing them in parallel that makes the floating point method seems fast. Stick with the integer only 
+functions shown above when in doubt.  
 It is also important to note that the performance of integer division is very dependent on the CPU. Intel CPUs for example sped up integer 
 division considerably in Coffee Lake, it is considerably slower on older CPUs. AMD Zen integer division is fast.
 
